@@ -10,8 +10,6 @@
 # -> already installed by default
 
 # install Pytorch 0.4.1
-$ vim liris_person_attributes/requirements.txt
-  # comment line 'ipdb==0.11'
 $ virtualenv -p /usr/bin/python3.5 torch-0.4.1-env
 $ source torch-0.4.1-env/bin/activate
 $ pip install --upgrade pip
