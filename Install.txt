@@ -16,14 +16,14 @@ $ pip install --upgrade pip
 $ pip install -r liris_person_attributes/requirements.txt
 
 # install opencv 2.x
-apt install libopencv-dev
+sudo apt install libopencv-dev
 
 # install ros video stream (optional)
-apt install ros-kinetic-video-stream-opencv
+sudo apt install ros-kinetic-video-stream-opencv
 
 # re-compile cv_bridge for Python 3.5 because standard ROS cv_bridge
 # works only with Python 2.7
-sudo aptitude install python-catkin-tools python3.5-dev python3-catkin-pkg-modules python3-numpy python3-yaml ros-kinetic-cv-bridge
+sudo apt install python-catkin-tools python3.5-dev python3-catkin-pkg-modules python3-numpy python3-yaml ros-kinetic-cv-bridge
 mkdir catkin_ws_py35
 cd catkin_ws_py35
 catkin init
