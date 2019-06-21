@@ -1,0 +1,15 @@
+# To install project dependencies:
+#   virtualenv -p python3 torch-env
+#   source torch-env/bin/activate
+#   pip install -r requirements.txt
+# FIRST DEP IS PYTHON3!
+torch==0.4.1
+torchvision==0.2.1
+matplotlib==3.0.0
+scipy==1.2.0
+scikit-image==0.14.2
+#ipdb==0.11
+
+# the dependencies below are maybe not necessary
+#Cython==0.28.5
+#pycocotools==2.0.0
