@@ -25,14 +25,17 @@ set -e
 git clone https://github.com/Robocup-Lyontech/liris_person_attributes.git
 
 # install Pytorch 0.4.1
-virtualenv -p /usr/bin/python3.5 torch-0.4.1-env
+virtualenv  -p /usr/bin/python3.5 torch-0.4.1-env
 source torch-0.4.1-env/bin/activate
 pip install --upgrade pip
 pip install -r liris_person_attributes/requirements.txt
-deactivate
 
-# re-compile cv_bridge for Python 3.5 because standard ROS cv_bridge
-# works only with Python 2.7
+# install extra packages in virtualenv to interact with ROS
+pip install PyYAML
+pip install rospkg
+pip install opencv-python
+
+# re-compile cv_bridge for Python 3.5 because standard ROS cv_bridge works only with Python 2.7
 mkdir catkin_ws_py35
 cd catkin_ws_py35
 catkin init
@@ -50,7 +53,6 @@ cp src/vision_opencv/cv_bridge/CMakeLists.txt src/vision_opencv/cv_bridge/CMakeL
 #  # by
 #  #   find_package(Boost REQUIRED python-py35)
 sed 's/Boost REQUIRED python3/Boost REQUIRED python-py35/' < src/vision_opencv/cv_bridge/CMakeLists.txt.bak  > src/vision_opencv/cv_bridge/CMakeLists.txt
-source ../torch-0.4.1-env/bin/activate
 source /opt/ros/kinetic/setup.bash
 catkin build cv_bridge
 source install/setup.bash --extend
