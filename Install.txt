@@ -1,8 +1,19 @@
+## installation
+$ mkdir person_attributes  &&  cd person_attributes
+$ wget https://github.com/Robocup-Lyontech/liris_person_attributes/blob/master/Install.sh
+$ bash install.sh
+  # this will clone the full liris_person_attributes repo,
+  # install Torch and compile cv_bridge for Python 3.5
 
-mkdir person_attributes  &&  cd person_attributes
-wget https://github.com/Robocup-Lyontech/liris_person_attributes/blob/master/Install.sh
-bash Install.sh
 
+
+
+
+
+
+#
+# Archive
+#
 
 ##################################
 #        June 2019               #
