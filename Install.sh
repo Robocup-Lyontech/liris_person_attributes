@@ -49,8 +49,8 @@ cp src/vision_opencv/cv_bridge/CMakeLists.txt src/vision_opencv/cv_bridge/CMakeL
 #  #   find_package(Boost REQUIRED python3)
 #  # by
 #  #   find_package(Boost REQUIRED python-py35)
-sed 's/Boost REQUIRED python3/Boost REQUIRED python-py35/' <src/vision_opencv/cv_bridge/CMakeLists.txt.bak >src/vision_opencv/cv_bridge/CMakeLists.txt
-source torch-0.4.1-env/bin/activate
+sed 's/Boost REQUIRED python3/Boost REQUIRED python-py35/' < src/vision_opencv/cv_bridge/CMakeLists.txt.bak  > src/vision_opencv/cv_bridge/CMakeLists.txt
+source ../torch-0.4.1-env/bin/activate
 source /opt/ros/kinetic/setup.bash
 catkin build cv_bridge
 source install/setup.bash --extend
