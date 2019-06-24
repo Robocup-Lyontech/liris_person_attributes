@@ -1,3 +1,9 @@
+
+mkdir person_attributes  &&  cd person_attributes
+wget https://github.com/Robocup-Lyontech/liris_person_attributes/blob/master/Install.sh
+bash Install.sh
+
+
 ##################################
 #        June 2019               #
 ##################################
