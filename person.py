@@ -28,9 +28,14 @@ import math
 import numpy
 
 # Our own stuff
-from . import loader_rapdataset_yiqiang
-from . import loader_peta_dataset
-from . import loader_rap_plus_peta_dataset
+try:
+  from . import loader_rapdataset_yiqiang
+  from . import loader_peta_dataset
+  from . import loader_rap_plus_peta_dataset
+except:
+  import loader_rapdataset_yiqiang
+  import loader_peta_dataset
+  import loader_rap_plus_peta_dataset
 
 
 # ************************************************************************

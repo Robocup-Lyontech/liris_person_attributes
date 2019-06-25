@@ -1,9 +1,14 @@
 #
 # Combined RAP+PETA dataset
 #
+from __future__ import print_function, division
 
-from . import loader_rapdataset_yiqiang
-from . import loader_peta_dataset
+try:
+  from . import loader_rapdataset_yiqiang
+  from . import loader_peta_dataset
+except:
+  import loader_rapdataset_yiqiang
+  import loader_peta_dataset
 
 from torch.utils.data import Dataset, DataLoader
 import numpy as np

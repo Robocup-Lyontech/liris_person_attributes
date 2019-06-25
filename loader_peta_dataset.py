@@ -1,6 +1,13 @@
+from __future__ import print_function, division
 import sys
 #from torch.utils.data import Dataset #, DataLoader
-import pathlib
+try:
+  # python 3.5
+  import pathlib
+except ImportError:
+  #python 2.7
+  import pathlib2 as pathlib
+
 import random
 from PIL import Image  # Pillow package
 

@@ -1,3 +1,5 @@
+from __future__ import print_function, division
+
 import sys
 import numpy as np
 import scipy.io as sio
