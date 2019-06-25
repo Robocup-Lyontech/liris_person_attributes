@@ -1,6 +1,6 @@
 ## installation
 $ mkdir person_attributes  &&  cd person_attributes
-$ wget https://github.com/Robocup-Lyontech/liris_person_attributes/blob/master/install.sh
+$ wget https://raw.githubusercontent.com/Robocup-Lyontech/liris_person_attributes/master/install.sh
 $ bash install.sh
   # this will clone the full liris_person_attributes repo,
   # install Torch and dependencies, then generate 2 scripts
