@@ -2,7 +2,7 @@ from __future__ import print_function, division
 
 try:
   from . import person_inference
-except
+except:
   import person_inference
 
 import rospy
