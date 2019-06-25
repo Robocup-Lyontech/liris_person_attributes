@@ -11,4 +11,6 @@ $ bash 1_run_roscore.sh
 
 # in a 2nd terminal
 $ bash 2_run_person_attributes_ros.sh
+  # note: a '~/catkin_ws' workspace is supposed to
+  #       exist ; if it's not the case, fix this script
 
