@@ -48,25 +48,25 @@ roscore
 ENVFULLPATH="$(readlink -f ./torch-0.4.1-env)"
 echo "#!/bin/bash
 
-SCRIPTABSPATH=\"$(readlink -f \"$0\")\"
-SCRIPTDIR=\"$(dirname \"$SCRIPTABSPATH\")\"
+SCRIPTABSPATH=\"\$(readlink -f \"\$0\")\"
+SCRIPTDIR=\"\$(dirname \"\$SCRIPTABSPATH\")\"
 
 set -e
 
 source \"$ENVFULLPATH/bin/activate\"
 source ~/catkin_ws/devel/setup.bash
 
-cd \"$SCRIPTDIR/liris_person_attributes\"
+cd \"\$SCRIPTDIR/liris_person_attributes\"
 python ./person_attributes_ros.py
 " > 2_run_person_attributes_ros.sh
 
 # script 3: image node
 echo "#!/bin/bash
 
-SCRIPTABSPATH=\"$(readlink -f \"$0\")\"
-SCRIPTDIR=\"$(dirname \"$SCRIPTABSPATH\")\"
+SCRIPTABSPATH=\"\$(readlink -f \"\$0\")\"
+SCRIPTDIR=\"\$(dirname \"\$SCRIPTABSPATH\")\"
 
-roslaunch  \"$SCRIPTDIR/../launch/el_video_file.launch\"
+roslaunch  \"\$SCRIPTDIR/../launch/el_video_file.launch\"
 " > 3_run_ros_image_node.sh
 
 
