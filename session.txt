@@ -1,1 +1,0 @@
-srun --reservation=chris_13 --gres=gpu:1 --pty bash -i
